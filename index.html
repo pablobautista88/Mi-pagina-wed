@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Odisea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('La odisea fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+            line-height: 1.6;
+            box-sizing: border-box;
+        }
+
+        
+        nav {
+            background-color: rgba(15, 15, 40, 0.9);
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #c0a16b;
+            font-weight: bold;
+            padding: 8px 15px;
+        }
+        nav ul li a:hover {
+            background-color: #c0a16b;
+            color: #1b1b2f;
+            border-radius: 5px;
+        }
+
+        /* Menú desplegable */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(20, 20, 50, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        #main-header {
+            text-align: center;
+            color: #fff;
+            padding: 40px;
+            background-color: rgba(20, 20, 50, 0.7);
+            margin-top: 60px;
+            box-sizing: border-box;
+        }
+
+        .content-section {
+            background-color: rgba(25, 25, 50, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #c0a16b;
+        }
+
+        .subtopics-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .subtopics-list li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .subtopics-list a {
+            text-decoration: none;
+            color: #c0a16b;
+            font-weight: bold;
+        }
+        .subtopics-list a:hover {
+            color: #ffffff;
+        }
+
+        
+        .accordion {
+            background-color: #1b1b2f;
+            color: #c0a16b;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .accordion:hover {
+            background-color: #c0a16b;
+            color: #1b1b2f;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: rgba(30, 30, 60, 0.8);
+            display: none;
+            overflow: hidden;
+            font-size: 16px;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 12px;
+            border: 1px solid #444;
+        }
+
+        .styled-table th {
+            background-color: #1b1b2f;
+            color: #c0a16b;
+            text-align: center;
+        }
+
+        .black-text {
+            color: #c0a16b;
+            font-weight: bold;
+        }
+
+        #main-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(15, 15, 40, 0.9);
+            color: #c0a16b;
+            box-sizing: border-box;
+        }
+
+       
+        header, section, aside, footer {
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #c0a16b;
+            border-radius: 10px;
+            background-color: rgba(30, 30, 60, 0.7);
+            box-sizing: border-box;
+        }
+        aside {
+            float: right;
+            width: 30%;
+            box-sizing: border-box;
+        }
+        section {
+            float: left;
+            width: 65%;
+            box-sizing: border-box;
+        }
+
+        
+        h1, h2, p {
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+
+        footer img {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#personajes">Personajes</a>
+                <ul>
+                    <li><a href="#odiseo">Odiseo</a></li>
+                    <li><a href="#penelope">Penélope</a></li>
+                    <li><a href="#telémaco">Telémaco</a></li>
+                </ul>
+            </li>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#lugares">Lugares</a></li>
+            <li><a href="#simbolismo">Simbolismo</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="main-header">
+        <h1>LA ODISEA</h1>
+    </header>
+
+    <section class="content-section" id="introduccion">
+        <article>
+            <p class="black-text">En mi sitio web hablaré del libro que estoy viendo en Educación Artística, que es el libro de La Odisea.</p>
+        </article>
+    </section>
+
+    <section class="content-section">
+        <h2>Subtemas</h2>
+        <ul class="subtopics-list">
+            <li><a href="#introduccion">Introducción a La Odisea</a></li>
+            <li><a href="#personajes">Personajes Principales</a></li>
+            <li><a href="#estructura">Estructura y Temas</a></li>
+            <li><a href="#lugares">Lugares Visitados</a></li>
+            <li><a href="#simbolismo">Simbolismo y Mitos</a></li>
+            <li><a href="#estilo">Estilo y Recursos Literarios</a></li>
+            <li><a href="#impacto">Impacto Cultural y Adaptaciones</a></li>
+        </ul>
+    </section>
+
+    <section class="content-section">
+        <h2>Lugares Visitados</h2>
+        <table class="styled-table">
+            <tr>
+                <th>Lugar</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td class="black-text">Ítaca</td>
+                <td class="black-text">La patria de Odiseo, a donde intenta regresar tras la guerra de Troya.</td>
+            </tr>
+            <tr>
+                <td class="black-text">Isla de los Cíclopes</td>
+                <td class="black-text">Donde Odiseo y sus hombres se encuentran con el temible Polifemo.</td>
+            </tr>
+            <tr>
+                <td class="black-text">Isla de Circe</td>
+                <td class="black-text">Lugar donde la hechicera Circe convierte a los hombres de Odiseo en cerdos.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="content-section">
+        <button class="accordion">Más sobre los Personajes</button>
+        <div class="panel">
+            <p>Odiseo es el héroe principal, rey de Ítaca, conocido por su astucia...</p>
+        </div>
+
+        <button class="accordion">Más sobre el Simbolismo</button>
+        <div class="panel">
+            <p>El mar es un símbolo clave de la travesía de Odiseo, representando tanto la separación como la búsqueda de regreso...</p>
+        </div>
+    </section>
+
+    <aside>
+        <p>La odisea: el viaje de regreso del héroe Odiseo a su patria, la isla de Ítaca...</p>
+    </aside>
+
+    <footer id="main-footer">
+        <p>Autor: Pablo Bautista</p>
+        <p>Contacto: pabloirongame@gmail.com</p>
+        <p>Institución: Skolmi</p>
+        <img src="logo.png" alt="Logo de La Odisea" width="150">
+        <img src="skolmi.png" alt="Skolmi" width="150">
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
